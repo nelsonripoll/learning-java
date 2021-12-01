@@ -93,7 +93,28 @@ public class Hello {
 		
 		
 		/*
-		 * ARITHMATIC
+		 * STRING
+		 * a special datatype in Java that is actually a class not a primitive data type
+		 * limited by memory or the MAX_VALUE of an int which was 2.14 billion
+		 * immutable after created
+		 */
+		
+		 String myString = "This is a string.";
+		 System.out.println(myString);
+		 
+		 myString += " Adding on to this string.";
+		 System.out.println(myString);
+		 
+		 myString += " Adding a unicode: \u00A9 2019.";
+		 System.out.println(myString);
+		 
+		 String numberString = "250.55";
+		 numberString += 49.95; // will not perform an arithmetic operation, just concatenation
+		 System.out.println(numberString); // 250.5549.95
+		 
+		 
+		/*
+		 * ARITHMETIC
 		 * addition, subtraction, multiplication, division, modulus, increment, decrement
 		 */
 
@@ -135,5 +156,121 @@ public class Hello {
 		
 		answer = --myIntVar;
 		System.out.println(answer); // 5
+		
+		
+
+		/*
+		 * IF-THEN-ELSE STATEMENT
+		 */
+		
+		if (true) {
+			System.out.println("This will print.");
+		}
+		
+		if (false) {
+			System.out.println("This will NOT print.");
+		} else {
+			System.out.println("This will print.");
+		}
+		
+		if (false) {
+			System.out.println("This will NOT print.");
+		} else if (true) {
+			System.out.println("This will print.");
+		} else {
+			System.out.println("This will NOT print.");
+		}
+		
+		
+		/*
+		 * COMPARISON OPERATORS
+		 */
+		
+		if (true == false) {
+			System.out.println("This will NOT print.");
+		}
+		
+		if (true != false) {
+			System.out.println("This will print.");
+		}
+		
+		if (50 > 40) {
+			System.out.println("This will print.");
+		}
+		
+		if (10 >= 10) {
+			System.out.println("This will print.");
+		}
+		
+		if (25 < 20) {
+			System.out.println("This will NOT print.");
+		}
+		
+		if (10 <= 10) {
+			System.out.println("This will print.");
+		}
+		
+		// compare object type
+		if (myString instanceof String) {
+			System.out.println("This will print.");
+		}
+		
+		
+		/*
+		 * LOGICAL AND (&&) OR (||) OPERATORS
+		 */
+		
+		if ((10 < 20) && (5 < 10)) {
+			System.out.println("This will print.");
+		}
+		
+		if ((10 < 20) && (10 < 5)) {
+			System.out.println("This will NOT print.");
+		}
+		
+		if ((10 < 20) || (10 < 5)) {
+			System.out.println("This will print.");
+		}
+		
+		
+		/*
+		 * TERNARY OPERATOR
+		 * this is a shorthand version of if-then-else
+		 */
+		
+		boolean isTrue = myTrueBoolean ? true : false;
+		
+		if (isTrue) {
+			System.out.println("This will print.");
+		}
+		
+		isTrue = myFalseBoolean ? true : false;
+		
+		if (isTrue) {
+			System.out.println("This will NOT print.");
+		}
+		
+		
+		/*
+		 * METHODS
+		 * see calculateScore and print score for the defined method
+		 */
+		
+		boolean gameOver = true;
+		
+		if (gameOver) {
+			int score = calculateScore(800, 5, 100);
+			printScore(score);
+		}
+		
+	}
+	
+	public static int calculateScore(int score, int levelCompleted, int bonus) {
+		int finalScore = score + (levelCompleted * bonus);
+		return finalScore;
+	}
+	
+	public static void printScore(int score) {
+		System.out.println("Final Score: " + score);
 	}
 }
