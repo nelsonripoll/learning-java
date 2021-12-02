@@ -252,25 +252,26 @@ public class Hello {
 		
 		
 		/*
-		 * METHODS
-		 * see calculateScore and print score for the defined method
+		 * SWITCH STATEMENT
 		 */
 		
-		boolean gameOver = true;
+		int switchValue = 3;
 		
-		if (gameOver) {
-			int score = calculateScore(800, 5, 100);
-			printScore(score);
+		switch (switchValue) {
+			case 1:
+				System.out.println("Value = 1");
+				break;
+			case 2:
+				System.out.println("Value = 2");
+				break;
+			case 3:
+			case 4:
+			case 5:
+				System.out.println("Value is either 3, 4, 5"); // this will print
+				break;
+			default:
+				System.out.println("Value unknown");
+				break;
 		}
-		
-	}
-	
-	public static int calculateScore(int score, int levelCompleted, int bonus) {
-		int finalScore = score + (levelCompleted * bonus);
-		return finalScore;
-	}
-	
-	public static void printScore(int score) {
-		System.out.println("Final Score: " + score);
 	}
 }
