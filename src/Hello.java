@@ -273,5 +273,19 @@ public class Hello {
 				System.out.println("Value unknown");
 				break;
 		}
+		
+		
+		/*
+		 * STRING PARSING
+		 */
+		
+		String numberAsString = "1234";
+		int number = Integer.parseInt(numberAsString);
+		
+		numberAsString += 1; // 12341
+		number += 1; // 1235
+		
+		String doubleAsString = "10.25";
+		double numberD = Double.parseDouble(doubleAsString);
 	}
 }
