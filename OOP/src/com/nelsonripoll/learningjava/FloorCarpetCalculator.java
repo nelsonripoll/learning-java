@@ -1,8 +1,5 @@
 package com.nelsonripoll.learningjava;
 
-import com.nelsonripoll.learningjava.Floor;
-import com.nelsonripoll.learningjava.Carpet;
-
 public class FloorCarpetCalculator {
 	private Floor floor;
 	private Carpet carpet;
